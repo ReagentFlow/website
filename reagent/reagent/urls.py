@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from containers.views import index
+from containers.views import containers_table
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', containers_table)
 ]

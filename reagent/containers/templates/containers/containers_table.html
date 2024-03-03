@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reagent Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 1000px; /* Adjust as needed */
+            margin: 0 auto;
+            padding-right: 20px; /* Indent from the end of the screen */
+            padding-left: 20px; /* Adjust the same value as padding-right to keep the table centered */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #41AB92;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Reagent Flow</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="color: #ffffff">Name of Reagent</th>
+                    <th style="color: #ffffff">Mass</th>
+                    <th style="color: #ffffff">Volume</th>
+                    <th style="color: #ffffff">Best Before Date</th>
+                    <th style="color: #ffffff">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for con in containers %}
+                    <tr>
+                    {% for val in con %}
+                        <td>{{val}}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
