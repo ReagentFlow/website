@@ -1,2 +1,5 @@
 venv
 .idea
+reagent/containers/migrations
+reagent/containers/__pycache__
+reagent/db.sqlite3
